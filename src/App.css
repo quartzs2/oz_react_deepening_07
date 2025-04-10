@@ -4,3 +4,13 @@
   box-sizing: border-box;
   background-color: #333;
 }
+
+.timer-container {
+  color: white;
+  background-color: black;
+  font-size: 32px;
+}
+
+.running {
+  background-color: aquamarine;
+}

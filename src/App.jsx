@@ -4,16 +4,16 @@ import Button from './components/Button';
 import './App.css';
 
 function App() {
-  const [componentRunning, setComponentRunning] = useState(false);
+  const [isComponentRunning, setIsComponentRunning] = useState(false);
 
-  const handleComponentToggle = () => setComponentRunning((prev) => !prev);
+  const handleComponentToggle = () => setIsComponentRunning((prev) => !prev);
 
   return (
     <div className="container">
-      <Button clickHandler={handleComponentToggle} isActive={componentRunning}>
-        {componentRunning ? '컴포넌트 정지' : '컴포넌트 시작'}
+      <Button onClick={handleComponentToggle} isActive={isComponentRunning} className={'toggle-button'}>
+        {isComponentRunning ? '컴포넌트 정지' : '컴포넌트 시작'}
       </Button>
-      {componentRunning && <Clock />}
+      {isComponentRunning && <Clock />}
     </div>
   );
 }
